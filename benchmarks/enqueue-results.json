@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "measuredAtUTC": "2026-10-26T15:02:10.029Z",
+  "sourceCommit": "cf1a7cf061082a4534d622e550f56fe37450132d",
+  "environment": {
+    "os": "win32",
+    "architecture": "x64",
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12700H",
+    "logicalCPUs": 20,
+    "memoryGiB": 15.6271,
+    "goVersion": "go version go1.27.3 windows/amd64",
+    "nodeVersion": "v24.18.0",
+    "redisVersion": "7.4.11",
+    "redisPersistence": "disabled",
+    "topology": "Native Go processes; dedicated Docker Redis on localhost",
+    "applicationSourceModified": false,
+    "completionVerification": "Unique task IDs in actual success log entries; not shared metrics counters"
+  },
+  "producerEnqueue": {
+    "jobsPerRun": 100000,
+    "concurrency": 32,
+    "repetitions": 3,
+    "warmupRequests": 200,
+    "runningWorkerProcesses": 0,
+    "runs": [
+      {
+        "requested": 100000,
+        "accepted": 100000,
+        "errors": 0,
+        "errorExamples": [],
+        "elapsedSeconds": 5.9326,
+        "requestsPerSecond": 16856.1182,
+        "p50Ms": 1.7765,
+        "p95Ms": 2.915,
+        "p99Ms": 3.6945,
+        "meanMs": 1.8921,
+        "queueLengthVerified": 100000
+      },
+      {
+        "requested": 100000,
+        "accepted": 100000,
+        "errors": 0,
+        "errorExamples": [],
+        "elapsedSeconds": 5.7581,
+        "requestsPerSecond": 17366.8226,
+        "p50Ms": 1.7364,
+        "p95Ms": 2.7461,
+        "p99Ms": 3.416,
+        "meanMs": 1.8365,
+        "queueLengthVerified": 100000
+      },
+      {
+        "requested": 100000,
+        "accepted": 100000,
+        "errors": 0,
+        "errorExamples": [],
+        "elapsedSeconds": 5.8572,
+        "requestsPerSecond": 17072.9636,
+        "p50Ms": 1.768,
+        "p95Ms": 2.8345,
+        "p99Ms": 3.4874,
+        "meanMs": 1.868,
+        "queueLengthVerified": 100000
+      }
+    ],
+    "medianRequestsPerSecond": 17072.9636,
+    "medianP95Ms": 2.8345
+  }
+}

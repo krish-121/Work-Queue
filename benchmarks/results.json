@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "measuredAtUTC": "2026-10-26T14:58:24.787Z",
+  "sourceCommit": "cf1a7cf061082a4534d622e550f56fe37450132d",
+  "environment": {
+    "os": "win32",
+    "architecture": "x64",
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12700H",
+    "logicalCPUs": 20,
+    "memoryGiB": 15.6271,
+    "goVersion": "go version go1.27.3 windows/amd64",
+    "nodeVersion": "v24.18.0",
+    "redisVersion": "7.4.11",
+    "redisPersistence": "disabled",
+    "topology": "Native Go processes; dedicated Docker Redis on localhost",
+    "applicationSourceModified": false,
+    "completionVerification": "Unique task IDs in actual success log entries; not shared metrics counters"
+  },
+  "producerEnqueue": {
+    "jobsPerRun": 5000,
+    "concurrency": 32,
+    "repetitions": 3,
+    "warmupRequests": 200,
+    "runningWorkerProcesses": 0,
+    "runs": [
+      {
+        "requested": 5000,
+        "accepted": 5000,
+        "errors": 0,
+        "errorExamples": [],
+        "elapsedSeconds": 0.4065,
+        "requestsPerSecond": 12299.1699,
+        "p50Ms": 2.2657,
+        "p95Ms": 4.4741,
+        "p99Ms": 6.691,
+        "meanMs": 2.5852,
+        "queueLengthVerified": 5000
+      },
+      {
+        "requested": 5000,
+        "accepted": 5000,
+        "errors": 0,
+        "errorExamples": [],
+        "elapsedSeconds": 0.3324,
+        "requestsPerSecond": 15040.0818,
+        "p50Ms": 2.022,
+        "p95Ms": 3.0487,
+        "p99Ms": 3.8823,
+        "meanMs": 2.1172,
+        "queueLengthVerified": 5000
+      },
+      {
+        "requested": 5000,
+        "accepted": 5000,
+        "errors": 0,
+        "errorExamples": [],
+        "elapsedSeconds": 0.3249,
+        "requestsPerSecond": 15390.9186,
+        "p50Ms": 1.9352,
+        "p95Ms": 3.3306,
+        "p99Ms": 4.4758,
+        "meanMs": 2.0685,
+        "queueLengthVerified": 5000
+      }
+    ],
+    "medianRequestsPerSecond": 15040.0818,
+    "medianP95Ms": 3.3306
+  },
+  "workerProcessing": {
+    "taskType": "send_email",
+    "workload": "Simulated 2-second delay plus printing and file logging; no emails sent",
+    "jobsPerRun": 60,
+    "repetitions": 3,
+    "enqueueConcurrency": 16,
+    "goroutinesPerProcess": 3,
+    "completionPollIntervalMs": 20,
+    "configurations": [
+      {
+        "workerProcesses": 1,
+        "totalWorkerGoroutines": 3,
+        "runs": [
+          {
+            "elapsedSeconds": 40.0948,
+            "completedJobs": 60,
+            "uniqueCompletedJobs": 60,
+            "duplicateCompletions": 0,
+            "acceptedJobs": 60,
+            "httpErrors": 0,
+            "queueLengthAtEnd": 0,
+            "jobsPerSecond": 1.4965
+          },
+          {
+            "elapsedSeconds": 40.0754,
+            "completedJobs": 60,
+            "uniqueCompletedJobs": 60,
+            "duplicateCompletions": 0,
+            "acceptedJobs": 60,
+            "httpErrors": 0,
+            "queueLengthAtEnd": 0,
+            "jobsPerSecond": 1.4972
+          },
+          {
+            "elapsedSeconds": 40.0999,
+            "completedJobs": 60,
+            "uniqueCompletedJobs": 60,
+            "duplicateCompletions": 0,
+            "acceptedJobs": 60,
+            "httpErrors": 0,
+            "queueLengthAtEnd": 0,
+            "jobsPerSecond": 1.4963
+          }
+        ],
+        "medianElapsedSeconds": 40.0948,
+        "medianJobsPerSecond": 1.4965
+      },
+      {
+        "workerProcesses": 2,
+        "totalWorkerGoroutines": 6,
+        "runs": [
+          {
+            "elapsedSeconds": 20.0621,
+            "completedJobs": 60,
+            "uniqueCompletedJobs": 60,
+            "duplicateCompletions": 0,
+            "acceptedJobs": 60,
+            "httpErrors": 0,
+            "queueLengthAtEnd": 0,
+            "jobsPerSecond": 2.9907
+          },
+          {
+            "elapsedSeconds": 20.0563,
+            "completedJobs": 60,
+            "uniqueCompletedJobs": 60,
+            "duplicateCompletions": 0,
+            "acceptedJobs": 60,
+            "httpErrors": 0,
+            "queueLengthAtEnd": 0,
+            "jobsPerSecond": 2.9916
+          },
+          {
+            "elapsedSeconds": 20.0728,
+            "completedJobs": 60,
+            "uniqueCompletedJobs": 60,
+            "duplicateCompletions": 0,
+            "acceptedJobs": 60,
+            "httpErrors": 0,
+            "queueLengthAtEnd": 0,
+            "jobsPerSecond": 2.9891
+          }
+        ],
+        "medianElapsedSeconds": 20.0621,
+        "medianJobsPerSecond": 2.9907
+      }
+    ],
+    "speedupTwoVersusOneProcess": 1.9985
+  }
+}

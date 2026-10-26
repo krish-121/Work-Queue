@@ -121,6 +121,13 @@ Example using fictional task data:
 SUCCESS: Task type: send_email Task payload: {"subject":"Example task","to":"recipient@example.com"} Retries left: 0
 ```
 
+## Local benchmarks
+
+- **Producer ingestion:** approximately **17,000 enqueue requests/second** with **p95 response latency below 3 ms**, using 32 concurrent clients across three 100,000-request trials. All 300,000 requests were accepted and verified in Redis, with zero observed HTTP errors. Workers were stopped during this producer-only test.
+- **Simulated job processing:** 60 two-second jobs completed in a median **40.09 seconds with three worker goroutines** and **20.06 seconds with six**, an approximately **2x throughput improvement** across two worker processes. Each configuration was measured three times, with every expected task ID verified exactly once in the success logs.
+
+These are local measurements of the existing application. The email task simulates work and does not deliver email. See the [benchmark methodology and raw results](benchmarks/README.md) and [copy-ready CV entry](benchmarks/CV.md).
+
 ---
 
 Maintained by Krishna.
