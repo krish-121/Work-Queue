@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+
+# Runtime logs
+logs.txt
+*.log
+
+# Local editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
