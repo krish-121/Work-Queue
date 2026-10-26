@@ -2,6 +2,10 @@
 
 A Distributed Background Task Processing System written in Go, using Redis for job queuing.
 
+**High level overview**
+    ![overview](WorkQueue.png)
+
+
 ## What's the need for this?
 
 This system is designed to handle the processing and execution of background tasks concurrently to improve user experience.
@@ -20,7 +24,7 @@ Provides a `/enqueue` route to add your jobs/tasks.
 
 #### How to add a job?
 
-- Send an HTTP POST request to the exposed `/enqueue` route on this URL: `/enqueue` on your configured producer
+- Send an HTTP POST request to `/enqueue` on your producer's configured host and port (`PORT_PRODUCER`).
 - It accepts a task in this format (JSON):
 
 **Example: An inbuilt task the system supports is sending an email. Its JSON request would look like this:**
@@ -52,7 +56,9 @@ type Task struct {
 
 The response will look like this:
 
-`Task of type 'send_email' has been successfully added to the queue`
+```text
+Task of type 'send_email' has been successfully added to the queue
+```
 
 ### 2. Worker
 
@@ -61,7 +67,7 @@ The response will look like this:
 
 #### How to view the status of your job?
 
-Send an HTTP GET request to `/metrics` on your configured worker
+Send an HTTP GET request to `/metrics` on your worker's configured host and port (`PORT_WORKER`).
 
 This will give a response like this:
 
@@ -109,8 +115,11 @@ func Process_Task(task_to_execute task.Task) error {
 
 - **Logging** of each event is provided and stored inside the logs.txt file. This helps to trace back the success or failure of a job.
 
-Example:
-`SUCCESS: Task type: send_email Task payload: {"subject":"Example task","to":"recipient@example.com"} Retries left: 0`
+Example using fictional task data:
+
+```text
+SUCCESS: Task type: send_email Task payload: {"subject":"Example task","to":"recipient@example.com"} Retries left: 0
+```
 
 ---
 
